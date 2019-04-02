@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище SearchProductsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Category_id" />
+    </Key>
+    <Property Name="Category_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentCategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Manufacturer_id" />
+    </Key>
+    <Property Name="Manufacturer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ManufacturerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ManufacturerAdress" Type="nvarchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="Prices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_id" Type="int" Nullable="false" />
+    <Property Name="Shop_id" Type="int" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Product_id" />
+    </Key>
+    <Property Name="Product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductCategory" Type="int" Nullable="false" />
+    <Property Name="ProductManufacturer" Type="int" />
+    <Property Name="ProductVolume" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopsAdress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Shop_id" Type="int" Nullable="false" />
+    <Property Name="ShopAdress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopLatitude" Type="float" />
+    <Property Name="ShopLongitude" Type="float" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserSecondName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserRegistrationDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserLogin" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="UserAdminRights" Type="bit" Nullable="false" />
+    <Property Name="UserPhoto" Type="image" />
+  </EntityType>
+  <EntityContainer Name="Хранилище SearchProductsModelContainer">
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prices" EntityType="Self.Prices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopsAdress" EntityType="Self.ShopsAdress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

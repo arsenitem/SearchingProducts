@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище SearchProductsModelContainer" CdmEntityContainer="SearchProductsEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="SearchProductsModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ParentCategoryID" ColumnName="ParentCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturer">
+      <EntityTypeMapping TypeName="SearchProductsModel.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="Manufacturer_id" ColumnName="Manufacturer_id" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="ManufacturerAdress" ColumnName="ManufacturerAdress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="SearchProductsModel.Prices">
+        <MappingFragment StoreEntitySet="Prices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="Shop_id" ColumnName="Shop_id" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="SearchProductsModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+          <ScalarProperty Name="ProductManufacturer" ColumnName="ProductManufacturer" />
+          <ScalarProperty Name="ProductVolume" ColumnName="ProductVolume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shops">
+      <EntityTypeMapping TypeName="SearchProductsModel.Shops">
+        <MappingFragment StoreEntitySet="Shops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopsAdress">
+      <EntityTypeMapping TypeName="SearchProductsModel.ShopsAdress">
+        <MappingFragment StoreEntitySet="ShopsAdress">
+          <ScalarProperty Name="Shop_id" ColumnName="Shop_id" />
+          <ScalarProperty Name="ShopAdress" ColumnName="ShopAdress" />
+          <ScalarProperty Name="ShopLatitude" ColumnName="ShopLatitude" />
+          <ScalarProperty Name="ShopLongitude" ColumnName="ShopLongitude" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SearchProductsModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserSecondName" ColumnName="UserSecondName" />
+          <ScalarProperty Name="UserCity" ColumnName="UserCity" />
+          <ScalarProperty Name="UserRegistrationDate" ColumnName="UserRegistrationDate" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserEmailConfirmed" ColumnName="UserEmailConfirmed" />
+          <ScalarProperty Name="UserAdminRights" ColumnName="UserAdminRights" />
+          <ScalarProperty Name="UserPhoto" ColumnName="UserPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
